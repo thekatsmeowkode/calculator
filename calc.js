@@ -26,27 +26,24 @@ if (!action)
 if (action === 'add'
 || action === 'subtract'
 || action === 'multiply'
-|| action === 'divide') {calcBody.dataset.previousKey = 'operator'}
-if (action === 'clear') {console.log('clear')}
-if (action === 'decimal') {screenBottom.textContent = displayReading + '.'}
-if (action === 'equal') {let secondOperand = displayReading}
+|| action === 'divide') {
+    calcBody.dataset.previousKey = 'operator';
+    calcBody.dataset.firstOperand = displayReading;
+    calcBody.dataset.operator = action}
+if (action === 'clear') {
+    console.log('clear')}
+if (action === 'decimal') {
+    screenBottom.textContent = displayReading + '.'}
+if (action === 'equal') {
+    let secondOperand = displayReading;
+    const firstOperand = calcBody.dataset.firstOperand;
+    const operator = calcBody.dataset.operator
+    screenBottom.textContent = calculate(firstOperand, operator, secondOperand)}
 })}
 
-// function add(a, b) {
-//     return a + b
-// }
-  
-// const subtract = function(a, b) {
-//  return a - b};
-
-// const multiply = function(a, b) {
-//     return a * b
-//   };
-
-// const divide = function(a, b) {
-//     return a / b
-// }
-
-// class Calculator {
-//     constructor(currentNumber, previousNumber)
-// }
+function calculate(firstOperand, operator, secondOperand) {
+    if (operator === 'add') {return Number(firstOperand) + Number(secondOperand)}
+    if (operator === 'subtract') {return Number(firstOperand) - Number(secondOperand)}
+    if (operator === 'multiply') {return Number(firstOperand) * Number(secondOperand)}
+    if (operator === 'divide') {return Number(firstOperand) / Number(secondOperand)
+}
