@@ -6,40 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="calc.css">
+    <script src="calc.js" defer></script>
 </head>
 <body>
-<div class="layout">
     <div class="calc_body">
         <div class="screen">
+            <p id="screenTop">Top</p>
+            <p id="screenBottom">0</p>
         </div>
         <div class="first_row">
-            <div class="button numberButton" id="seven">7</div>
-            <div class="button numberButton" id="eight">8</div>
-            <div class="button numberButton" id="nine">9</div>
-            <div class="button divideButton" id="divide">/</div>
+            <button class="button numberButton" id="seven">7</button>
+            <button class="button numberButton" id="eight">8</button>
+            <button class="button numberButton" id="nine">9</button>
+            <button class="button divideButton" data-action = "divide"id="divide">/</button>
         </div>
         <div class="second_row">
-            <div class="button numberButton" id="four">4</div>
-            <div class="button numberButton" id="five">5</div>
-            <div class="button numberButton" id="six">6</div>
-            <div class="button multiplyButton" id="multiply">x</div>
+            <button class="button numberButton" id="four">4</button>
+            <button class="button numberButton" id="five">5</button>
+            <button class="button numberButton" id="six">6</button>
+            <button class="button multiplyButton" data-action = "multiply" id="multiply">x</button>
         </div>
         <div class="third_row">
-            <div class="button numberButton" id="one">1</div>
-            <div class="button numberButton" id="two">2</div>
-            <div class="button numberButton" id="three">3</div>
-            <div class="button subtractButton" id="subtract">-</div>
+            <button class="button numberButton" id="one">1</button>
+            <button class="button numberButton" id="two">2</button>
+            <button class="button numberButton" id="three">3</button>
+            <button class="button subtractButton" data-action = "subtract" id="subtract">-</button>
         </div>
         <div class="fourth_row">
-            <div class="button decimalButton" id="decimal">.</div>
-            <div class="button numberButton" id="zero">0</div>
-            <div class="button equalButton" id="equal">=</div>
-            <div class="button addButton" id="add">+</div>
+            <button class="button decimalButton" data-action = "decimal" id="decimal">.</button>
+            <button class="button numberButton" id="zero">0</button>
+            <button class="button equalButton" data-action = "equal" id="equal">=</button>
+            <button class="button addButton" data-action = "add" id="add">+</button>
         </div>
         <div class="fifth_row">
-            <div class="button clearButton" id="clear">Clear</div>
+            <div class="button clearButton" data-action = "clear" id="clear">Clear</button>
         </div>
     </div>
-</div>
+    
+
 </body>
 </html>
