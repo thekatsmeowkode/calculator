@@ -6,43 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="calc.css">
-    <script src="calc.js" defer></script>
+    <script src="calc2.js" defer></script>
 </head>
 <body>
-    <div class="calc_body">
-        <div class="screen">
-            <p id="screenTop">Top</p>
-            <p id="screenBottom">0</p>
-        </div>
-        <div class="first_row">
-            <button class="button numberButton" id="seven">7</button>
-            <button class="button numberButton" id="eight">8</button>
-            <button class="button numberButton" id="nine">9</button>
-            <button class="button divideButton" data-action = "divide"id="divide">/</button>
-        </div>
-        <div class="second_row">
-            <button class="button numberButton" id="four">4</button>
-            <button class="button numberButton" id="five">5</button>
-            <button class="button numberButton" id="six">6</button>
-            <button class="button multiplyButton" data-action = "multiply" id="multiply">x</button>
-        </div>
-        <div class="third_row">
-            <button class="button numberButton" id="one">1</button>
-            <button class="button numberButton" id="two">2</button>
-            <button class="button numberButton" id="three">3</button>
-            <button class="button subtractButton" data-action = "subtract" id="subtract">-</button>
-        </div>
-        <div class="fourth_row">
-            <button class="button decimalButton" data-action = "decimal" id="decimal">.</button>
-            <button class="button numberButton" id="zero">0</button>
-            <button class="button equalButton" data-action = "equal" id="equal">=</button>
-            <button class="button addButton" data-action = "add" id="add">+</button>
-        </div>
-        <div class="fifth_row">
-            <div class="button clearButton" data-action = "clear" id="clear">Clear</button>
-        </div>
-    </div>
-    
+    <div class="calculator">
 
+        <input type="text" class="calculator-screen" value="" disabled />
+        
+        <div class="calculator-keys">
+          
+          <button type="button" class="operator" value="+">+</button>
+          <button type="button" class="operator" value="-">-</button>
+          <button type="button" class="operator" value="*">&times;</button>
+          <button type="button" class="operator" value="/">&divide;</button>
+      
+          <button type="button" value="7">7</button>
+          <button type="button" value="8">8</button>
+          <button type="button" value="9">9</button>
+      
+      
+          <button type="button" value="4">4</button>
+          <button type="button" value="5">5</button>
+          <button type="button" value="6">6</button>
+      
+      
+          <button type="button" value="1">1</button>
+          <button type="button" value="2">2</button>
+          <button type="button" value="3">3</button>
+      
+          <button type="button" value="0">0</button>
+          <button type="button" class="decimal" value=".">.</button>
+          <button type="button" class="clear" value="all-clear">AC</button>
+      
+          <button type="button" class="equals" value="=">=</button>
+      
+        </div>
+      </div>
 </body>
 </html>
